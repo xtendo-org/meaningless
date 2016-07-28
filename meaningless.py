@@ -1,7 +1,7 @@
 class Meaningless(object):
-    def __init__(self, prime_64):
-        self._upper = prime_64 >> 32
-        self._lower = prime_64 & 0xFFFFFFFF
+    def __init__(self, key_64):
+        self._upper = key_64 >> 32
+        self._lower = key_64 & 0xFFFFFFFF
 
     def encode(self, plain_64):
         lower_plain = plain_64 & 0xFFFFFFFF

@@ -9,9 +9,7 @@ Meaningless is a simple codec function intended to serve such purpose: excise th
 ## Usage
 
 ```python
-# You need to fix the 64-bit prime below to get consistent results.
-# If you have OpenSSL installed, you may get one with:
-# openssl prime -generate -bits 64 -hex
+# You need to fix the 64-bit random number below to get consistent results.
 >>> m = Meaningless(0xeb57c60ca37bf6d2)
 >>> m.encode(27)
 15150640503858120147
