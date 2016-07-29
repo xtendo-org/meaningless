@@ -2,7 +2,7 @@
 
 When dealing with a group of things, using string as a unique identifier for each one of them is not a good idea because people change their minds. A good unique identifier should not change over time, so it is desirable to remove any meaning from the identifier. An unsigned 64-bit integer is generally good.
 
-The trouble is, unlike UUIDs, integers draw an illusion of nonexistent meaning: "The object with ID 1 should somehow important" or "the object 10 and 11 should be somehow related." Therefore, even when these identifiers are _stored_ as integers, we want to _display_ them as a series of completely meaningless characters with no regularity, just like how UUIDs look.
+The trouble is, unlike UUIDs, integers draw an illusion of nonexistent meaning: "The object with ID 1 should be somehow important" or "the object 10 and 11 should be somehow related." Therefore, even when these identifiers are _stored_ as integers, we want to _display_ them as a series of completely meaningless characters with no regularity, just like how UUIDs look.
 
 Meaningless is a simple codec function intended to serve such purpose: excise the meaning from integers. It is a bijective function for unsigned 64-bit integers with fast encoding and decoding.
 
